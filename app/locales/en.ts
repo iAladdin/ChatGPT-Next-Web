@@ -319,6 +319,11 @@ const en: LocaleType = {
         Title: "Custom Models",
         SubTitle: "Custom model options, seperated by comma",
       },
+      StopTokens: {
+        Title: "Stop Tokens",
+        SubTitle:
+          "Stop: (string / array / null) Optional,Defaults to null,Up to 4 sequences where the API will stop generating further tokens.",
+      },
       Google: {
         ApiKey: {
           Title: "API Key",

@@ -1165,6 +1165,24 @@ export function Settings() {
               }
             ></input>
           </ListItem>
+
+          <ListItem
+            title={Locale.Settings.Access.StopTokens.Title}
+            subTitle={Locale.Settings.Access.StopTokens.SubTitle}
+          >
+            <input
+              type="text"
+              value={config.modelConfig.stopTokens}
+              placeholder='"<|im_end|>", "<|endoftext|>", "<|im_start|>"'
+              onChange={(e) =>
+                config.update(
+                  (config) =>
+                    (config.modelConfig.stopTokens =
+                      e.currentTarget.value.split(",")),
+                )
+              }
+            ></input>
+          </ListItem>
         </List>
 
         <List>

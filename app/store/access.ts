@@ -41,6 +41,7 @@ const DEFAULT_ACCESS_STATE = {
   disableGPT4: false,
   disableFastLink: false,
   customModels: "",
+  stopTokens: "null",
 };
 
 export const useAccessStore = createPersistStore(
