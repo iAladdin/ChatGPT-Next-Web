@@ -1167,19 +1167,44 @@ export function Settings() {
           </ListItem>
 
           <ListItem
-            title={Locale.Settings.Access.StopTokens.Title}
-            subTitle={Locale.Settings.Access.StopTokens.SubTitle}
+            title={Locale.Settings.Access.stop_string.Title}
+            subTitle={Locale.Settings.Access.stop_string.SubTitle}
           >
             <input
               type="text"
-              value={config.modelConfig.stopTokens}
+              value={config.modelConfig.stop_string}
               placeholder='"<|im_end|>", "<|endoftext|>", "<|im_start|>"'
               onChange={(e) =>
-                config.update(
-                  (config) =>
-                    (config.modelConfig.stopTokens =
-                      e.currentTarget.value.split(",")),
-                )
+                config.update((config) => {
+                  let newStopRaw = e.currentTarget.value;
+                  let newStop =
+                    newStopRaw.length === 0 ? [] : newStopRaw.split(",");
+                  config.modelConfig.stop_string = newStop;
+                })
+              }
+            ></input>
+          </ListItem>
+          <ListItem
+            title={Locale.Settings.Access.stop_token_ids.Title}
+            subTitle={Locale.Settings.Access.stop_token_ids.SubTitle}
+          >
+            <input
+              type="text"
+              value={
+                config.modelConfig.stop_token_ids
+                  ? config.modelConfig.stop_token_ids.join(",")
+                  : ""
+              }
+              placeholder="2,7"
+              onChange={(e) =>
+                config.update((config) => {
+                  let newStopRaw = e.currentTarget.value;
+                  let newStop =
+                    newStopRaw.length === 0
+                      ? []
+                      : newStopRaw.split(",").map(Number);
+                  config.modelConfig.stop_token_ids = newStop;
+                })
               }
             ></input>
           </ListItem>

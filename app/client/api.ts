@@ -27,6 +27,7 @@ export interface LLMConfig {
   presence_penalty?: number;
   frequency_penalty?: number;
   stop?: string | string[] | null;
+  stop_token_ids?: number[];
 }
 
 export interface ChatOptions {

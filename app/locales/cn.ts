@@ -333,10 +333,15 @@ const cn = {
         Title: "自定义模型名",
         SubTitle: "增加自定义模型可选项，使用英文逗号隔开",
       },
-      StopTokens: {
+      stop_string: {
         Title: "停止词",
         SubTitle:
           "停止词 Stop: (string / array / null) 可选,默认是null, 用于指定模型停止生成的词",
+      },
+      stop_token_ids: {
+        Title: "停止token序列",
+        SubTitle:
+          "停止token序列 Stop: array 可选,默认是[], 用于指定模型停止生成的token",
       },
     },
 

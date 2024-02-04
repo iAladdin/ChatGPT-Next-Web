@@ -57,7 +57,8 @@ export const DEFAULT_CONFIG = {
     compressMessageLengthThreshold: 1000,
     enableInjectSystemPrompts: true,
     template: DEFAULT_INPUT_TEMPLATE,
-    stopTokens: [] as string[],
+    stop_string: [] as string[],
+    stop_token_ids: [] as number[],
   },
 };
 
@@ -144,6 +145,8 @@ export const useAppConfig = createPersistStore(
         state.modelConfig.frequency_penalty = 0;
         state.modelConfig.top_p = 1;
         state.modelConfig.template = DEFAULT_INPUT_TEMPLATE;
+        state.modelConfig.stop_string = [""];
+        state.modelConfig.stop_token_ids = [];
         state.dontShowMaskSplashScreen = false;
         state.hideBuiltinMasks = false;
       }

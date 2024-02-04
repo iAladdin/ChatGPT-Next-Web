@@ -319,10 +319,15 @@ const en: LocaleType = {
         Title: "Custom Models",
         SubTitle: "Custom model options, seperated by comma",
       },
-      StopTokens: {
+      stop_string: {
         Title: "Stop Tokens",
         SubTitle:
           "Stop: (string / array / null) Optional,Defaults to null,Up to 4 sequences where the API will stop generating further tokens.",
+      },
+      stop_token_ids: {
+        Title: "Stop token ids",
+        SubTitle:
+          "Stop token ids , stop_token_ids:array Optional, Defaults to null",
       },
       Google: {
         ApiKey: {
