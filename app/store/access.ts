@@ -16,12 +16,12 @@ const DEFAULT_OPENAI_URL =
 
 const DEFAULT_ACCESS_STATE = {
   accessCode: "",
-  useCustomConfig: false,
+  useCustomConfig: true,
 
   provider: ServiceProvider.OpenAI,
 
   // openai
-  openaiUrl: DEFAULT_OPENAI_URL,
+  openaiUrl: "https://7869-43-153-25-251.ngrok-free.app", //DEFAULT_OPENAI_URL,
   openaiApiKey: "",
 
   // azure
@@ -40,8 +40,9 @@ const DEFAULT_ACCESS_STATE = {
   hideBalanceQuery: false,
   disableGPT4: false,
   disableFastLink: false,
-  customModels: "",
-  stop_string: "null",
+  customModels: "nchat_7b_chat_nsfw",
+  stop_string: "</s>,\n\n,\n#,##,###,### Instruction:",
+  stop_token_ids: "2",
 };
 
 export const useAccessStore = createPersistStore(
