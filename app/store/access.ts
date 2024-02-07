@@ -21,8 +21,8 @@ const DEFAULT_ACCESS_STATE = {
   provider: ServiceProvider.OpenAI,
 
   // openai
-  openaiUrl: "https://7869-43-153-25-251.ngrok-free.app", //DEFAULT_OPENAI_URL,
-  openaiApiKey: "",
+  openaiUrl: "https://n-model.nsfwcharaterai.ai/", //DEFAULT_OPENAI_URL,
+  openaiApiKey: "EMPTY",
 
   // azure
   azureUrl: "",
@@ -40,7 +40,7 @@ const DEFAULT_ACCESS_STATE = {
   hideBalanceQuery: false,
   disableGPT4: false,
   disableFastLink: false,
-  customModels: "nchat_7b_chat_nsfw",
+  customModels: "nchat_chat_nsfw",
   stop_string: "</s>,\n\n,\n#,##,###,### Instruction:",
   stop_token_ids: "2",
 };

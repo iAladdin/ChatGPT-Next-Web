@@ -325,9 +325,9 @@ const en: LocaleType = {
           "Stop: (string / array / null) Optional,Defaults to null,Up to 4 sequences where the API will stop generating further tokens.",
       },
       stop_token_ids: {
-        Title: "Stop token ids",
+        Title: "Stop Token Ids",
         SubTitle:
-          "Stop token ids , stop_token_ids:array Optional, Defaults to null",
+          "Stop Token Ids , stop_token_ids:array Optional, Defaults to null",
       },
       Google: {
         ApiKey: {
